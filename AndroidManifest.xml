@@ -1,0 +1,59 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.honeyv.dictation2013101"
+    android:versionCode="3"
+    android:versionName="1.01" >
+
+    <uses-sdk
+        android:minSdkVersion="8"
+        android:targetSdkVersion="17" />
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <application
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        <activity
+            android:name="com.honeyv.dictation2013101.MainActivity"
+            android:label="@string/title_activity_main" >
+        </activity>
+        <activity
+            android:name="com.honeyv.dictation2013101.IntroActivity"
+            android:label="@string/title_activity_main" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <data android:host="IntroActivity"
+                    android:scheme="LnwKakao" />
+                <action android:name = "android.intent.action.VIEW" />
+                <category android:name = "android.intent.category.BROWSABLE" />
+                <category android:name="android.intent.category.DEFAULT" />
+                </intent-filter>
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.SubActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.ReadingActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.FirstWritingActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.SecondWritingActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.ThirdWritingActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.CheckActivity" >
+        </activity>
+        <activity android:name="com.honeyv.dictation2013101.ResultActivity" >
+        </activity>
+        <activity
+            android:name="com.google.ads.AdActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|uiMode|screenSize|smallestScreenSize"
+             />        
+    </application>
+
+</manifest>
